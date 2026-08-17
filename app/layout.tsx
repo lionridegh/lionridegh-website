@@ -55,6 +55,15 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   );
 }
 
+function ArrowRightIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -79,14 +88,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="relative text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                      className="relative text-sm font-medium text-slate-300 transition-colors hover:text-white group"
                     >
                       {item.label}
+                      <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-brand-red transition-all duration-300 group-hover:w-full" />
                     </Link>
                   ))}
+                  <Link
+                    href="/contact#showroom"
+                    className="group relative inline-flex items-center gap-1.5 rounded-full border-2 border-brand-red/60 bg-brand-red/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.15em] text-brand-red shadow-glowRed transition-all hover:bg-brand-red hover:text-white hover:border-brand-red hover:-translate-y-0.5"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Visit Showroom
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand-red px-5 py-2 text-xs font-black uppercase tracking-wider text-white shadow-glowRed ring-2 ring-brand-red/40 transition-all hover:bg-red-600 hover:shadow-glowRedLg hover:-translate-y-0.5 animate-[pulse_3s_ease-in-out_infinite]"
+                  >
+                    <span className="flex h-2 w-2 rounded-full bg-white" />
+                    Book a Test Ride
+                  </Link>
                 </nav>
 
                 <div className="flex items-center gap-3">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-brand-red px-3.5 py-1.5 text-[10px] font-black uppercase tracking-wider text-white shadow-glowRed ring-1.5 ring-brand-red/40 transition-all hover:bg-red-600 md:hidden"
+                  >
+                    <span className="flex h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                    Book Test Ride
+                  </Link>
                   <a
                     href="https://wa.me/233207032222"
                     target="_blank"
@@ -114,18 +147,47 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <main className="flex-1">{children}</main>
 
-          <footer className="relative overflow-hidden border-t border-white/10 bg-black text-white">
+          <footer className="relative overflow-hidden border-t-[4px] border-brand-red shadow-[0_-15px_60px_rgba(255,0,0,0.25)] bg-black text-white">
             <div className="absolute inset-0 bg-teal-corner-glows opacity-70 pointer-events-none" />
+            <div className="absolute inset-0 bg-red-corner-glows opacity-50 pointer-events-none" />
+            <div className="absolute left-0 right-0 top-0 h-[4px] bg-gradient-to-r from-brand-cyan via-brand-red to-brand-cyan" />
+            <div className="absolute left-0 right-0 top-[4px] h-20 bg-gradient-to-b from-brand-red/12 to-transparent" />
             <div className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+              <div className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-brand-red/20 bg-brand-red/5 p-5 backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-red shadow-glowRed">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-white">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-black uppercase tracking-widest text-brand-red">Visit Our Tema Showroom</p>
+                    <p className="text-xs text-slate-400">See vehicles in person · Test ride available · 8AM–6PM daily</p>
+                  </div>
+                </div>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-red px-6 py-2.5 text-xs font-black uppercase tracking-widest text-white shadow-glowRed ring-2 ring-brand-red/30 transition-all hover:bg-red-600 hover:ring-brand-red/50"
+                >
+                  Get Directions
+                  <ArrowRightIcon />
+                </Link>
+              </div>
+
               <div className="grid gap-12 lg:grid-cols-4">
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyanLight shadow-glow">
+                    <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyanLight shadow-glow">
                       <span className="text-xl font-black text-black">L</span>
+                      <div className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-brand-red ring-2 ring-black shadow-glowRed" />
                     </div>
                     <div>
                       <span className="text-xl font-bold tracking-tight">Lion Ride Gh</span>
-                      <p className="text-xs uppercase tracking-widest text-brand-cyan">Tema, Accra, Ghana</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-xs uppercase tracking-widest text-brand-cyan">Tema, Accra, Ghana</p>
+                        <span className="h-1 w-1 rounded-full bg-brand-red" />
+                        <p className="text-xs uppercase tracking-widest text-brand-red font-bold">Open Now</p>
+                      </div>
                     </div>
                   </div>
                   <p className="max-w-md text-sm leading-relaxed text-slate-400">
@@ -137,7 +199,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Facebook lionridegh"
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-cyan hover:bg-brand-cyan/10 hover:text-brand-cyan"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-red hover:bg-brand-red/10 hover:text-brand-red hover:shadow-glowRed"
                     >
                       <FacebookIcon />
                     </a>
@@ -146,7 +208,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Instagram lionridegh"
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-cyan hover:bg-brand-cyan/10 hover:text-brand-cyan"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-red hover:bg-brand-red/10 hover:text-brand-red hover:shadow-glowRed"
                     >
                       <InstagramIcon />
                     </a>
@@ -155,7 +217,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       target="_blank"
                       rel="noreferrer"
                       aria-label="TikTok lionridegh"
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-cyan hover:bg-brand-cyan/10 hover:text-brand-cyan"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-red hover:bg-brand-red/10 hover:text-brand-red hover:shadow-glowRed"
                     >
                       <TikTokIcon />
                     </a>
@@ -164,19 +226,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       target="_blank"
                       rel="noreferrer"
                       aria-label="YouTube Lion Ride Gh"
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-red hover:bg-brand-red/10 hover:text-brand-red"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-brand-red/40 bg-brand-red/10 text-brand-red shadow-glowRed transition-all hover:bg-brand-red hover:text-white"
                     >
                       <YouTubeIcon />
+                    </a>
+                    <a
+                      href="https://wa.me/233207032222"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="WhatsApp Lion Ride Gh"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-brand-cyan hover:bg-brand-cyan/10 hover:text-brand-cyan"
+                    >
+                      <WhatsAppIcon />
                     </a>
                   </div>
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="text-sm font-semibold uppercase tracking-widest text-brand-cyan">Navigation</h3>
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-6 rounded-full bg-brand-red" />
+                    <h3 className="text-sm font-black uppercase tracking-widest text-brand-red">Navigation</h3>
+                  </div>
                   <ul className="space-y-3 text-sm">
                     {navItems.map((item) => (
-                      <li key={item.href}>
-                        <Link href={item.href} className="text-slate-400 transition-colors hover:text-white">
+                      <li key={item.href} className="group flex items-center gap-2">
+                        <span className="h-1 w-1 rounded-full bg-slate-600 group-hover:bg-brand-red transition-all" />
+                        <Link href={item.href} className="text-slate-400 transition-colors group-hover:text-brand-red">
                           {item.label}
                         </Link>
                       </li>
@@ -185,21 +260,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="text-sm font-semibold uppercase tracking-widest text-brand-cyan">Contact</h3>
-                  <ul className="space-y-3 text-sm text-slate-400">
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-6 rounded-full bg-brand-cyan" />
+                    <h3 className="text-sm font-black uppercase tracking-widest text-brand-cyan">Contact</h3>
+                  </div>
+                  <ul className="space-y-4 text-sm text-slate-400">
                     <li className="space-y-1">
                       <p className="text-xs uppercase tracking-wider text-slate-500">Address</p>
-                      <p className="text-white">202 Apple Ave., Community 10,<br />Tema, Accra, Ghana</p>
+                      <p className="flex items-start gap-2 text-white">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-brand-red flex-shrink-0" />
+                        202 Apple Ave., Community 10,<br />Tema, Accra, Ghana
+                      </p>
                     </li>
                     <li className="space-y-1">
                       <p className="text-xs uppercase tracking-wider text-slate-500">Phone</p>
-                      <a href="tel:+233207032222" className="text-white transition-colors hover:text-brand-cyan">
+                      <a href="tel:+233207032222" className="flex items-center gap-2 text-white transition-colors hover:text-brand-red">
+                        <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
                         +233 20 703 2222
                       </a>
                     </li>
                     <li className="space-y-1">
                       <p className="text-xs uppercase tracking-wider text-slate-500">Email</p>
-                      <a href="mailto:lionridegh@gmail.com" className="text-white transition-colors hover:text-brand-cyan">
+                      <a href="mailto:lionridegh@gmail.com" className="flex items-center gap-2 text-white transition-colors hover:text-brand-red">
+                        <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
                         lionridegh@gmail.com
                       </a>
                     </li>
@@ -207,14 +290,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
 
-              <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+              <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-brand-red/20 pt-8 sm:flex-row">
                 <p className="text-xs text-slate-500">
                   © {new Date().getFullYear()} Lion Ride Gh. All rights reserved.
                 </p>
                 <div className="flex items-center gap-6 text-xs text-slate-500">
-                  <span>Built for Ghana 🇬🇭</span>
-                  <span className="h-1 w-1 rounded-full bg-slate-600" />
-                  <span>Clean Energy Mobility</span>
+                  <span className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-red animate-pulse" />
+                    Built for Ghana 🇬🇭
+                  </span>
+                  <span className="h-1 w-1 rounded-full bg-brand-red" />
+                  <span className="flex items-center gap-1.5">
+                    <span className="text-brand-cyan">⚡</span>
+                    Clean Energy Mobility
+                  </span>
                 </div>
               </div>
             </div>

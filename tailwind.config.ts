@@ -26,6 +26,8 @@ const config: Config = {
         soft: '0 20px 45px rgba(15, 23, 42, 0.12)',
         glow: '0 0 60px rgba(0, 191, 179, 0.35)',
         glowLg: '0 0 100px rgba(0, 191, 179, 0.4)',
+        glowRed: '0 0 60px rgba(255, 0, 0, 0.4)',
+        glowRedLg: '0 0 100px rgba(255, 0, 0, 0.45)',
         card: '0 4px 24px rgba(0, 0, 0, 0.08)',
       },
       fontFamily: {
