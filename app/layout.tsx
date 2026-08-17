@@ -58,14 +58,15 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-brand-navy antialiased">
+      <body className="min-h-screen bg-white text-black antialiased">
         <div className="flex min-h-screen flex-col">
-          <header className="sticky top-0 z-50 border-b border-white/5 bg-brand-navy/95 backdrop-blur-xl">
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <header className="relative sticky top-0 z-50 overflow-hidden border-b border-white/5 bg-black/95 backdrop-blur-xl">
+            <div className="absolute inset-0 bg-teal-corner-glows-sm opacity-80 pointer-events-none" />
+            <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center gap-3 group">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-cyan-400 shadow-glow transition-transform group-hover:scale-105">
-                    <span className="text-lg font-black text-brand-navy">L</span>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyanLight shadow-glow transition-transform group-hover:scale-105">
+                    <span className="text-lg font-black text-black">L</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-base font-bold tracking-tight text-white">Lion Ride Gh</span>
@@ -90,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     href="https://wa.me/233207032222"
                     target="_blank"
                     rel="noreferrer"
-                    className="hidden items-center gap-2 rounded-full bg-brand-cyan px-5 py-2.5 text-sm font-semibold text-brand-navy shadow-glow transition-all hover:bg-cyan-400 hover:shadow-lg hover:shadow-brand-cyan/40 sm:inline-flex"
+                    className="hidden items-center gap-2 rounded-full bg-brand-cyan px-5 py-2.5 text-sm font-semibold text-black shadow-glow transition-all hover:bg-brand-cyanLight hover:shadow-lg hover:shadow-brand-cyan/40 sm:inline-flex"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     WhatsApp
@@ -113,13 +114,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <main className="flex-1">{children}</main>
 
-          <footer className="border-t border-white/10 bg-brand-navy text-white">
-            <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <footer className="relative overflow-hidden border-t border-white/10 bg-black text-white">
+            <div className="absolute inset-0 bg-teal-corner-glows opacity-70 pointer-events-none" />
+            <div className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
               <div className="grid gap-12 lg:grid-cols-4">
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-cyan-400">
-                      <span className="text-xl font-black text-brand-navy">L</span>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyanLight shadow-glow">
+                      <span className="text-xl font-black text-black">L</span>
                     </div>
                     <div>
                       <span className="text-xl font-bold tracking-tight">Lion Ride Gh</span>
@@ -127,7 +129,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </div>
                   </div>
                   <p className="max-w-md text-sm leading-relaxed text-slate-400">
-                    Premium electric bicycles and tricycles built for Ghana's roads. Empowering clean, affordable, and dependable mobility for businesses and individuals across Greater Accra and beyond.
+                    Premium electric bicycles and tricycles built for Ghana&apos;s roads. Empowering clean, affordable, and dependable mobility for businesses and individuals across Greater Accra and beyond.
                   </p>
                   <div className="flex items-center gap-3">
                     <a

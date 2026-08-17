@@ -40,7 +40,7 @@ export default function ProductsPage() {
                   </div>
                 ))}
               </div>
-              <Link href="/order" className="inline-flex items-center rounded-full bg-brand-cyan px-5 py-3 text-sm font-semibold text-white transition hover:bg-cyan-600">
+              <Link href="/order" className="inline-flex items-center rounded-full bg-brand-cyan px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-cyanDark">
                 Enquire about {product.name}
               </Link>
             </div>

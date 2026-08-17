@@ -204,16 +204,17 @@ function getSpecIcon(label: string) {
 export default function HomePage() {
   return (
     <div className="bg-white">
-      <section className="relative isolate overflow-hidden bg-brand-navy">
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+      <section className="relative isolate overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-teal-corner-glows" />
+        <div className="absolute inset-0 bg-grid-pattern-dark opacity-40" />
         <div className="absolute inset-0 bg-radial-glow" />
         <div
-          className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full opacity-20 blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(0,180,200,0.6) 0%, transparent 70%)' }}
+          className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full opacity-25 blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(0,191,179,0.65) 0%, transparent 70%)' }}
         />
         <div
-          className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full opacity-10 blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(255,0,0,0.5) 0%, transparent 70%)' }}
+          className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full opacity-12 blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(0,191,179,0.55) 0%, transparent 70%)' }}
         />
 
         <div className="relative mx-auto w-full max-w-7xl px-4 pb-28 pt-20 sm:px-6 lg:px-8 lg:pb-36 lg:pt-28">
@@ -227,7 +228,7 @@ export default function HomePage() {
 
             <h1 className="animate-slide-up text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Ghana&apos;s{' '}
-              <span className="bg-gradient-to-r from-brand-cyan via-cyan-300 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-cyan via-brand-cyanLight to-brand-cyanLighter bg-clip-text text-transparent">
                 Electric Revolution
               </span>{' '}
               Starts Here
@@ -240,7 +241,7 @@ export default function HomePage() {
             <div className="mt-12 flex animate-slide-up flex-col items-center justify-center gap-4 sm:flex-row opacity-0" style={{ animationDelay: '0.2s' }}>
               <Link
                 href="/products"
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-cyan px-8 py-4 text-base font-bold text-brand-navy shadow-glow transition-all hover:bg-cyan-400 hover:shadow-xl hover:shadow-brand-cyan/30 hover:-translate-y-0.5 sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-cyan px-8 py-4 text-base font-bold text-black shadow-glow transition-all hover:bg-brand-cyanLight hover:shadow-xl hover:shadow-brand-cyan/30 hover:-translate-y-0.5 sm:w-auto"
               >
                 View Our Products
                 <ArrowRightIcon />
@@ -255,8 +256,8 @@ export default function HomePage() {
           </div>
 
           <div className="relative mx-auto mt-24 animate-fade-in max-w-5xl opacity-0" style={{ animationDelay: '0.35s' }}>
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-brand-cyan/20 via-cyan-400/10 to-brand-red/10 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-brand-navy shadow-2xl">
+            <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-brand-cyan/20 via-brand-cyanLight/10 to-brand-red/10 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-black shadow-2xl">
               <div className="aspect-[16/9] w-full">
                 <Image
                   src={cloudinaryUrl('hero_bike.jpg.png', { width: 1600 })}
@@ -283,7 +284,7 @@ export default function HomePage() {
                     <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 text-brand-cyan transition-all duration-300 group-hover:scale-110 group-hover:from-brand-cyan/20 group-hover:shadow-glow">
                       <Icon />
                     </div>
-                    <p className="text-3xl font-black tracking-tight text-brand-navy sm:text-4xl">
+                    <p className="text-3xl font-black tracking-tight text-black sm:text-4xl">
                       {stat.value}
                     </p>
                     <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-slate-500">
@@ -306,7 +307,7 @@ export default function HomePage() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-brand-cyan">
               Our Product Lineup
             </p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-black sm:text-5xl">
               Electric Vehicles Built For Purpose
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -315,7 +316,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {products.map((product, index) => {
+            {products.map((product) => {
               const displaySpecs = product.specs.slice(0, 3);
               return (
                 <article
@@ -330,7 +331,7 @@ export default function HomePage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute left-4 top-4">
-                      <span className="inline-flex rounded-full bg-brand-navy/90 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-cyan backdrop-blur-sm">
+                      <span className="inline-flex rounded-full bg-black/85 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-cyan backdrop-blur-sm">
                         {product.type}
                       </span>
                     </div>
@@ -338,7 +339,7 @@ export default function HomePage() {
 
                   <div className="flex flex-1 flex-col p-7">
                     <div className="mb-2 flex items-start justify-between gap-2">
-                      <h3 className="text-2xl font-black tracking-tight text-brand-navy group-hover:text-brand-cyan transition-colors">
+                      <h3 className="text-2xl font-black tracking-tight text-black group-hover:text-brand-cyan transition-colors">
                         {product.name}
                       </h3>
                     </div>
@@ -359,7 +360,7 @@ export default function HomePage() {
                             </div>
                             <div className="min-w-0">
                               <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400">{spec.label}</p>
-                              <p className="truncate text-sm font-semibold text-brand-navy">{spec.value}</p>
+                              <p className="truncate text-sm font-semibold text-black">{spec.value}</p>
                             </div>
                           </div>
                         );
@@ -368,7 +369,7 @@ export default function HomePage() {
 
                     <Link
                       href="/products"
-                      className="mt-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-navy px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-brand-cyan hover:text-brand-navy group/btn"
+                      className="mt-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-black px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-brand-cyan hover:text-black group/btn"
                     >
                       Learn More
                       <ArrowRightIcon />
@@ -400,7 +401,7 @@ export default function HomePage() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-brand-red">
               Why Choose Lion Ride Gh
             </p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-black sm:text-5xl">
               More Than Just Vehicles
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -418,10 +419,10 @@ export default function HomePage() {
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${benefit.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-100`} />
                   <div className="relative">
-                    <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-navy text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-cyan group-hover:text-brand-navy group-hover:shadow-glow">
+                    <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-black text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-cyan group-hover:text-black group-hover:shadow-glow">
                       <Icon />
                     </div>
-                    <h3 className="mb-3 text-2xl font-black tracking-tight text-brand-navy">
+                    <h3 className="mb-3 text-2xl font-black tracking-tight text-black">
                       {benefit.title}
                     </h3>
                     <p className="text-base leading-7 text-slate-600">
@@ -436,15 +437,16 @@ export default function HomePage() {
       </section>
 
       <section className="relative isolate overflow-hidden py-24 sm:py-32">
-        <div className="absolute inset-0 bg-brand-navy" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0 bg-teal-corner-glows" />
+        <div className="absolute inset-0 bg-grid-pattern-dark opacity-30" />
         <div
-          className="absolute -top-40 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full opacity-20 blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(0,180,200,0.5) 0%, transparent 70%)' }}
+          className="absolute -top-40 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full opacity-25 blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(0,191,179,0.6) 0%, transparent 70%)' }}
         />
         <div
-          className="absolute -bottom-60 -right-20 h-[500px] w-[500px] rounded-full opacity-10 blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(255,0,0,0.5) 0%, transparent 70%)' }}
+          className="absolute -bottom-60 -right-20 h-[500px] w-[500px] rounded-full opacity-15 blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(0,191,179,0.5) 0%, transparent 70%)' }}
         />
 
         <div className="relative mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -458,7 +460,7 @@ export default function HomePage() {
 
             <h2 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
               Ready to{' '}
-              <span className="bg-gradient-to-r from-brand-cyan via-cyan-300 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-cyan via-brand-cyanLight to-brand-cyanLighter bg-clip-text text-transparent">
                 Ride?
               </span>
             </h2>

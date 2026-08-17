@@ -9,17 +9,23 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          cyan: '#00B4C8',
+          cyan: '#00BFB3',
+          cyanLight: '#26D9CC',
+          cyanLighter: '#5FF0E5',
+          cyanDark: '#008C82',
+          cyanDarker: '#005953',
           red: '#FF0000',
           slate: '#0F172A',
           fog: '#F8FAFC',
-          navy: '#0A0F1E',
-          navyLight: '#111833',
+          navy: '#000000',
+          navyLight: '#050A0F',
+          navyTeal: '#031210',
         },
       },
       boxShadow: {
         soft: '0 20px 45px rgba(15, 23, 42, 0.12)',
-        glow: '0 0 60px rgba(0, 180, 200, 0.3)',
+        glow: '0 0 60px rgba(0, 191, 179, 0.35)',
+        glowLg: '0 0 100px rgba(0, 191, 179, 0.4)',
         card: '0 4px 24px rgba(0, 0, 0, 0.08)',
       },
       fontFamily: {
