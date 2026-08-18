@@ -218,8 +218,8 @@ export default function HomePage() {
         />
 
         <div className="relative mx-auto w-full max-w-7xl px-4 pb-28 pt-20 sm:px-6 lg:px-8 lg:pb-36 lg:pt-28">
-          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-12">
-            <div className="text-center lg:text-left">
+          <div className="grid grid-cols-1 items-center justify-center gap-14 lg:grid-cols-2 lg:items-center lg:gap-16 lg:justify-items-stretch">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:justify-center">
               <div className="mb-8 inline-flex animate-fade-in items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm">
                 <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
                 <span className="text-xs font-medium uppercase tracking-widest text-slate-300">
@@ -238,7 +238,7 @@ export default function HomePage() {
                 Starts Here
               </h1>
 
-              <p className="mx-auto mt-8 max-w-2xl animate-slide-up text-lg leading-8 text-slate-300 sm:text-xl opacity-0 lg:mx-0" style={{ animationDelay: '0.1s' }}>
+              <p className="mt-8 max-w-2xl animate-slide-up text-lg leading-8 text-slate-300 sm:text-xl opacity-0" style={{ animationDelay: '0.1s' }}>
                 Premium electric bicycles and tricycles engineered for Ghana&apos;s roads. Dependable, affordable, and built for the future of Accra and Tema mobility.
               </p>
 
@@ -259,17 +259,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative animate-fade-in opacity-0" style={{ animationDelay: '0.35s' }}>
-              <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-brand-cyan/30 via-brand-cyanLight/20 to-brand-cyan/30 blur-3xl" />
-              <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-r from-brand-cyan/20 via-brand-cyanLight/15 to-brand-cyan/20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-black shadow-2xl shadow-brand-cyan/20">
+            <div className="relative mx-auto w-full max-w-2xl animate-fade-in opacity-0 lg:mx-0" style={{ animationDelay: '0.35s' }}>
+              <div className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-brand-cyan/35 via-brand-cyanLight/25 to-brand-cyan/35 blur-3xl" />
+              <div className="absolute -inset-3 rounded-[2.5rem] bg-gradient-to-r from-brand-cyan/25 via-brand-cyanLight/20 to-brand-cyan/25 blur-2xl" />
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-black shadow-2xl shadow-brand-cyan/30">
                 <div className="aspect-[4/3] w-full">
-                  <Image
-                    src="https://res.cloudinary.com/notcmjfs/image/upload/v1786547642/lionridegh/ed3_01m.jpg.png"
+                  <img
+                    src="https://res.cloudinary.com/notcmjfs/image/upload/lionridegh/ed3_01m.jpg.png"
                     alt="Lion Ride Gh ED3-01M electric tricycle"
-                    fill
-                    className="object-cover opacity-95"
-                    priority
+                    className="h-full w-full object-cover opacity-95"
                   />
                 </div>
               </div>
@@ -340,7 +338,7 @@ export default function HomePage() {
               return (
                 <article
                   key={product.slug}
-                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 border-l-[3px] border-l-brand-cyan bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/30 hover:border-l-brand-cyan hover:shadow-2xl hover:shadow-brand-cyan/10"
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/30 hover:shadow-2xl hover:shadow-brand-cyan/10"
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50">
                     <Image

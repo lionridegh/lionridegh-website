@@ -14,7 +14,7 @@ export default function ProductsPage() {
 
       <div className="grid gap-8 lg:grid-cols-2">
         {products.map((product) => (
-          <article key={product.slug} className="overflow-hidden rounded-[2rem] border border-slate-200 border-l-[3px] border-l-brand-cyan bg-white shadow-soft">
+          <article key={product.slug} className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-soft">
             <div className="relative h-72 w-full">
               <Image
                 src={cloudinaryUrl(product.imagePublicId, { width: 1000 })}
