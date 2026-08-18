@@ -75,16 +75,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center gap-3 group">
-                  <div className="relative h-[44px] w-[180px] transition-transform group-hover:scale-[1.03]">
-                    <Image
-                      src="https://res.cloudinary.com/notcmjfs/image/upload/v1786547642/lionridegh/logo.png"
-                      alt="Lion Ride Gh logo"
-                      fill
-                      sizes="180px"
-                      className="object-contain drop-shadow-[0_0_8px_rgba(0,191,179,0.25)]"
-                      priority
-                    />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/notcmjfs/image/upload/h_50/lionridegh/logos/favicon.png"
+                    alt="Lion Ride Gh logo"
+                    className="h-[45px] w-auto drop-shadow-[0_0_8px_rgba(0,191,179,0.25)] transition-transform group-hover:scale-[1.05]"
+                  />
+                  <span className="text-base font-bold tracking-tight text-white">Lion Ride Gh</span>
                 </Link>
 
                 <nav className="hidden items-center gap-8 md:flex">
