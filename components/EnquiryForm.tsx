@@ -103,12 +103,12 @@ export default function EnquiryForm({ endpoint, submitLabel, includeSubject }: E
         />
       </label>
 
-      {status === 'error' && <p className="text-sm text-brand-red">{error}</p>}
+      {status === 'error' && <p className="text-sm text-brand-cyan">{error}</p>}
       {status === 'success' && <p className="text-sm text-brand-cyan">Message submitted successfully. We will contact you shortly.</p>}
 
       <button
         type="submit"
-        className="inline-flex items-center justify-center rounded-full bg-brand-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-600"
+        className="inline-flex items-center justify-center rounded-full bg-brand-cyan px-6 py-3 text-sm font-semibold text-black shadow-glow transition hover:bg-brand-cyanLight hover:shadow-xl hover:shadow-brand-cyan/30"
         disabled={status === 'sending'}
       >
         {status === 'sending' ? 'Sending...' : submitLabel}

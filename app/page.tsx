@@ -229,7 +229,10 @@ export default function HomePage() {
             <h1 className="animate-slide-up text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Ghana&apos;s{' '}
               <span className="bg-gradient-to-r from-brand-cyan via-brand-cyanLight to-brand-cyanLighter bg-clip-text text-transparent">
-                Electric Revolution
+                Electric
+              </span>{' '}
+              <span className="text-brand-red">
+                Revolution
               </span>{' '}
               Starts Here
             </h1>
@@ -280,12 +283,15 @@ export default function HomePage() {
             <div className="relative grid grid-cols-2 gap-8 md:grid-cols-4">
               {stats.map((stat, i) => {
                 const Icon = stat.icon;
+                const isCapacity = stat.label === 'Maximum Capacity';
                 return (
                   <div key={stat.label} className="group relative flex flex-col items-center text-center">
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 text-brand-cyan transition-all duration-300 group-hover:scale-110 group-hover:from-brand-cyan/20 group-hover:shadow-glow">
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 text-brand-cyan group-hover:from-brand-cyan/20 group-hover:shadow-glow">
                       <Icon />
                     </div>
-                    <p className="text-3xl font-black tracking-tight text-black sm:text-4xl">
+                    <p className={`text-3xl font-black tracking-tight sm:text-4xl ${
+                      isCapacity ? 'text-brand-red' : 'text-brand-cyan'
+                    }`}>
                       {stat.value}
                     </p>
                     <p className="mt-2 text-sm font-bold uppercase tracking-widest text-slate-500">
@@ -331,7 +337,7 @@ export default function HomePage() {
               return (
                 <article
                   key={product.slug}
-                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/30 hover:shadow-2xl hover:shadow-brand-cyan/10"
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 border-l-[3px] border-l-brand-red bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/30 hover:border-l-brand-red hover:shadow-2xl hover:shadow-brand-cyan/10"
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50">
                     <Image

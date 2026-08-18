@@ -96,16 +96,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ))}
                   <Link
                     href="/contact"
-                    className="group relative inline-flex items-center gap-1.5 rounded-full border border-brand-red/30 bg-white/5 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-brand-red/90 transition-all hover:border-brand-red/50 hover:bg-brand-red/5 hover:-translate-y-0.5"
+                    className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand-red px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-white shadow-[0_0_25px_rgba(255,0,0,0.25)] transition-all hover:bg-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.4)] hover:-translate-y-0.5"
                   >
-                    Book Test Ride
+                    Book a Test Ride
                   </Link>
                 </nav>
 
                 <div className="flex items-center gap-3">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center rounded-full border border-brand-red/30 bg-white/5 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-brand-red/90 transition-all hover:bg-brand-red/5 md:hidden"
+                    className="inline-flex items-center rounded-full bg-brand-red px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,0,0,0.25)] transition-all hover:bg-red-600 md:hidden"
                   >
                     Book Test Ride
                   </Link>
@@ -136,7 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <main className="flex-1">{children}</main>
 
-          <footer className="relative overflow-hidden border-t border-brand-red bg-black text-white">
+          <footer className="relative overflow-hidden border-t-[2px] border-t-brand-red bg-black text-white">
             <div className="absolute inset-0 bg-teal-corner-glows opacity-70 pointer-events-none" />
             <div className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
               <div className="grid gap-12 lg:grid-cols-4">
