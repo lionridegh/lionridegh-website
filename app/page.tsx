@@ -263,8 +263,8 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-black shadow-2xl">
               <div className="aspect-[16/9] w-full">
                 <Image
-                  src={cloudinaryUrl('hero_bike.jpg.png', { width: 1600 })}
-                  alt="Lion Ride Gh electric tricycle"
+                  src={cloudinaryUrl('lionridegh/ed3_01m.jpg.png', { width: 1600 })}
+                  alt="Lion Ride Gh ED3-01M electric tricycle"
                   fill
                   className="object-cover opacity-95"
                   priority
