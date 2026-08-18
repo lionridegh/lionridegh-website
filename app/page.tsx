@@ -340,7 +340,7 @@ export default function HomePage() {
               return (
                 <article
                   key={product.slug}
-                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 border-l-[3px] border-l-brand-red bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/30 hover:border-l-brand-red hover:shadow-2xl hover:shadow-brand-cyan/10"
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 border-l-[3px] border-l-brand-cyan bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan/30 hover:border-l-brand-cyan hover:shadow-2xl hover:shadow-brand-cyan/10"
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50">
                     <Image
