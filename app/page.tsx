@@ -218,57 +218,60 @@ export default function HomePage() {
         />
 
         <div className="relative mx-auto w-full max-w-7xl px-4 pb-28 pt-20 sm:px-6 lg:px-8 lg:pb-36 lg:pt-28">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-8 inline-flex animate-fade-in items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
-              <span className="text-xs font-medium uppercase tracking-widest text-slate-300">
-                Premium Electric Mobility · Ghana
-              </span>
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-12">
+            <div className="text-center lg:text-left">
+              <div className="mb-8 inline-flex animate-fade-in items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm">
+                <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
+                <span className="text-xs font-medium uppercase tracking-widest text-slate-300">
+                  Premium Electric Mobility · Ghana
+                </span>
+              </div>
+
+              <h1 className="animate-slide-up text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+                Ghana&apos;s{' '}
+                <span className="bg-gradient-to-r from-brand-cyan via-brand-cyanLight to-brand-cyanLighter bg-clip-text text-transparent">
+                  Electric
+                </span>{' '}
+                <span className="text-brand-red">
+                  Revolution
+                </span>{' '}
+                Starts Here
+              </h1>
+
+              <p className="mx-auto mt-8 max-w-2xl animate-slide-up text-lg leading-8 text-slate-300 sm:text-xl opacity-0 lg:mx-0" style={{ animationDelay: '0.1s' }}>
+                Premium electric bicycles and tricycles engineered for Ghana&apos;s roads. Dependable, affordable, and built for the future of Accra and Tema mobility.
+              </p>
+
+              <div className="mt-12 flex animate-slide-up flex-col items-center justify-center gap-4 sm:flex-row opacity-0 lg:justify-start" style={{ animationDelay: '0.2s' }}>
+                <Link
+                  href="/products"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-cyan px-8 py-4 text-base font-bold text-black shadow-glow transition-all hover:bg-brand-cyanLight hover:shadow-xl hover:shadow-brand-cyan/30 hover:-translate-y-0.5 sm:w-auto"
+                >
+                  View Our Products
+                  <ArrowRightIcon />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-brand-cyan hover:bg-white/10 hover:-translate-y-0.5 sm:w-auto"
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
 
-            <h1 className="animate-slide-up text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Ghana&apos;s{' '}
-              <span className="bg-gradient-to-r from-brand-cyan via-brand-cyanLight to-brand-cyanLighter bg-clip-text text-transparent">
-                Electric
-              </span>{' '}
-              <span className="text-brand-red">
-                Revolution
-              </span>{' '}
-              Starts Here
-            </h1>
-
-            <p className="mx-auto mt-8 max-w-2xl animate-slide-up text-lg leading-8 text-slate-300 sm:text-xl opacity-0" style={{ animationDelay: '0.1s' }}>
-              Premium electric bicycles and tricycles engineered for Ghana&apos;s roads. Dependable, affordable, and built for the future of Accra and Tema mobility.
-            </p>
-
-            <div className="mt-12 flex animate-slide-up flex-col items-center justify-center gap-4 sm:flex-row opacity-0" style={{ animationDelay: '0.2s' }}>
-              <Link
-                href="/products"
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-cyan px-8 py-4 text-base font-bold text-black shadow-glow transition-all hover:bg-brand-cyanLight hover:shadow-xl hover:shadow-brand-cyan/30 hover:-translate-y-0.5 sm:w-auto"
-              >
-                View Our Products
-                <ArrowRightIcon />
-              </Link>
-              <Link
-                href="/contact"
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-brand-cyan hover:bg-white/10 hover:-translate-y-0.5 sm:w-auto"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          <div className="relative mx-auto mt-24 animate-fade-in max-w-5xl opacity-0" style={{ animationDelay: '0.35s' }}>
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-brand-cyan/20 via-brand-cyanLight/15 to-brand-cyan/20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-black shadow-2xl">
-              <div className="aspect-[16/9] w-full">
-                <Image
-                  src={cloudinaryUrl('lionridegh/ed3_01m.jpg.png', { width: 1600 })}
-                  alt="Lion Ride Gh ED3-01M electric tricycle"
-                  fill
-                  className="object-cover opacity-95"
-                  priority
-                />
+            <div className="relative animate-fade-in opacity-0" style={{ animationDelay: '0.35s' }}>
+              <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-brand-cyan/30 via-brand-cyanLight/20 to-brand-cyan/30 blur-3xl" />
+              <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-r from-brand-cyan/20 via-brand-cyanLight/15 to-brand-cyan/20 blur-2xl" />
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navyLight to-black shadow-2xl shadow-brand-cyan/20">
+                <div className="aspect-[4/3] w-full">
+                  <Image
+                    src="https://res.cloudinary.com/notcmjfs/image/upload/v1786547642/lionridegh/ed3_01m.jpg.png"
+                    alt="Lion Ride Gh ED3-01M electric tricycle"
+                    fill
+                    className="object-cover opacity-95"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

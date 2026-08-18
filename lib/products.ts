@@ -83,6 +83,6 @@ export const products: Product[] = [
       { label: 'Top speed', value: '25 km/h' },
       { label: 'Weight', value: '23 kg' },
     ],
-    imagePublicId: 'lion_bmx.jpg.png',
+    imagePublicId: 'lionridegh/lion_bmx.jpg.png',
   },
 ];
