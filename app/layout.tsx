@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Lion Ride Gh | Electric Bicycles & Tricycles Ghana',
@@ -74,12 +75,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center gap-3 group">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-cyanLight shadow-glow transition-transform group-hover:scale-105">
-                    <span className="text-lg font-black text-black">L</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-base font-bold tracking-tight text-white">Lion Ride Gh</span>
-                    <span className="text-[10px] uppercase tracking-widest text-brand-cyan">Electric Mobility</span>
+                  <div className="relative h-[44px] w-[180px] transition-transform group-hover:scale-[1.03]">
+                    <Image
+                      src="https://res.cloudinary.com/notcmjfs/image/upload/v1786547642/lionridegh/logo.png"
+                      alt="Lion Ride Gh logo"
+                      fill
+                      sizes="180px"
+                      className="object-contain drop-shadow-[0_0_8px_rgba(0,191,179,0.25)]"
+                      priority
+                    />
                   </div>
                 </Link>
 
